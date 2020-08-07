@@ -467,7 +467,7 @@ static void indent(struct buffer* b, size_t amount)
 {
     size_t spaces = amount * 4; /* 4 spaces per indent */
 
-    char temp[spaces + 1];
+    char* temp = alloca(spaces + 1);
 
     for(size_t i = 0; i < spaces; ++i)
         temp[i] = ' ';

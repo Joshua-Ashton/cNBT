@@ -23,6 +23,10 @@ extern "C" {
 #include <stddef.h> /* for size_t */
 #include <stdint.h>
 #include <stdio.h>  /* for FILE* */
+#include <malloc.h> /* for alloca */
+#ifndef _MSC_VER
+# include <alloca.h>
+#endif
 
 #include "buffer.h" /* for struct buffer */
 #include "list.h"   /* For struct list_entry etc. */
