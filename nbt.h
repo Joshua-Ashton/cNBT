@@ -10,6 +10,10 @@
 #ifndef NBT_H
 #define NBT_H
 
+#ifndef _CRT_SECURE_NO_WARNINGS
+#define _CRT_SECURE_NO_WARNINGS
+#endif
+
 #ifdef __cplusplus
 #ifdef _MSC_VER
 #define restrict __restrict
