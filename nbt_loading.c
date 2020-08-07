@@ -90,7 +90,7 @@ static struct buffer __compress(const void* mem,
         .zfree    = Z_NULL,
         .opaque   = Z_NULL,
         .next_in  = (void*)mem,
-        .avail_in = len
+        .avail_in = (uInt)len
     };
 
     /* "The default value is 15"... */
@@ -159,7 +159,7 @@ static struct buffer __decompress(const void* mem, size_t len)
         .zfree    = Z_NULL,
         .opaque   = Z_NULL,
         .next_in  = (void*)mem,
-        .avail_in = len
+        .avail_in = (uInt)len
     };
 
     /* "Add 32 to windowBits to enable zlib and gzip decoding with automatic
