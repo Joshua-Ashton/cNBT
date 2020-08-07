@@ -379,9 +379,9 @@ nbt_node* nbt_find(nbt_node* tree, nbt_predicate_t predicate, void* aux)
     list_for_each(pos, &list->entry)
     {
         struct nbt_list* p = list_entry(pos, struct nbt_list, entry);
-        struct nbt_node* found;
+        struct nbt_node* found = nbt_find(p->data, predicate, aux);
 
-        if((found = nbt_find(p->data, predicate, aux)))
+        if(found != NULL)
             return found;
     }
 
