@@ -11,7 +11,11 @@
 #define NBT_H
 
 #ifdef __cplusplus
+#ifdef _MSC_VER
+#define restrict __restrict
+#else
 #define restrict __restrict__
+#endif
 extern "C" {
 #endif
 
