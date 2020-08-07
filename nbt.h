@@ -81,7 +81,7 @@ typedef struct nbt_node {
     nbt_type type;
     char* name; /* This may be NULL. Check your damn pointers. */
 
-    union { /* payload */
+    union nbt_payload { /* payload */
 
         /* tag_end has no payload */
         int8_t  tag_byte;
